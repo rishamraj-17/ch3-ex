@@ -1,5 +1,8 @@
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Person {
     private String name;
+    @Autowired
     private Parrot parrot;
 
     public String getName() {
@@ -20,9 +23,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", parrot=" + parrot +
-                '}';
+        return "Person name : "+name +" "+getParrot().toString();
     }
 }

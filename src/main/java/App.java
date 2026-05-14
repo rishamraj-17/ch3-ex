@@ -1,10 +1,12 @@
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import resources.ProjectConfig;
 
 public class App {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(ProjectConfig.class);
 
+        Person person = context.getBean(Person.class);
 
+        System.out.println(person.toString());
     }
 }
