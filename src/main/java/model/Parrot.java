@@ -16,6 +16,6 @@ public class Parrot {
 
     @Override
     public String toString() {
-        return "model.Parrot : "+name;
+        return "Parrot : "+name;
     }
 }

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Person {
     private String name = "Nimita";
-    private Parrot parrot;
+    private final Parrot parrot;
 
     @Autowired
     public Person(Parrot parrot){
@@ -25,12 +25,8 @@ public class Person {
         return parrot;
     }
 
-    public void setParrot(Parrot parrot) {
-        this.parrot = parrot;
-    }
-
     @Override
     public String toString() {
-        return "model.Person name : "+name +" "+getParrot().toString();
+        return "Person name : "+name +" "+parrot.toString();
     }
 }
